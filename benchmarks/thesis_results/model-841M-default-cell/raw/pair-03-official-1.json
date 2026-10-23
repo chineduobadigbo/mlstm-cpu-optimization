@@ -1,0 +1,4845 @@
+{
+  "finished_utc": "2026-10-17T18:47:41.134232+00:00",
+  "host": {
+    "cpu_model": "13th Gen Intel(R) Core(TM) i7-13700K",
+    "kernel": "6.18.54.1-microsoft-standard-WSL2",
+    "memory_gib": 30.6,
+    "os": "Ubuntu 22.04.5 LTS",
+    "python": "3.11.15",
+    "torch": "2.12.0+cpu",
+    "torch_config": "PyTorch built with:\n  - GCC 13.3\n  - C++ Version: 202002\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.11.2 (Git Hash 03c022d3ffdcee958cfacbe720048e725fdf644c)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=7661cd9c6b841b62b7f411aa52ec51f05457263b, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all  -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CXX_COMPILER=/opt/rh/gcc-toolset-13/root/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=old-style-cast -faligned-new -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-dangling-reference -Wno-error=dangling-reference -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.12.0, USE_CUDA=0, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n",
+    "transformers": "5.9.0"
+  },
+  "identity": {
+    "affinity": [
+      0
+    ],
+    "backend": "official",
+    "backends": [
+      "official",
+      "local_kernel"
+    ],
+    "checkpoint": "mlstm_v1--tokenparam--ctx-8192--params-841.5M--tokens-926.94B--id-m97a5wxv",
+    "configuration": "avx2_c_t_fused_r16_bhtd",
+    "execution": {
+      "compile": null,
+      "mode": "eager"
+    },
+    "fp_policy": "default",
+    "kernel": "avx2_c_t_fused_r16_bhtd",
+    "pair_index": 3,
+    "prefill_only": null,
+    "scopes": [
+      "adapter_core"
+    ],
+    "threads": 1
+  },
+  "in_model_cells": null,
+  "measurements": [
+    {
+      "block": 0,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.848905,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.739301,
+        3.898227,
+        3.78339,
+        3.848905,
+        3.878322
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 0,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 5.660873,
+      "prompt_length": 64,
+      "samples_ms": [
+        5.645954,
+        5.680207,
+        5.660873,
+        5.700084,
+        5.611647
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 0,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 43.051342,
+      "prompt_length": 256,
+      "samples_ms": [
+        43.091356,
+        43.051342,
+        44.720207,
+        42.936056,
+        42.875812
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 0,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 185.774741,
+      "prompt_length": 1024,
+      "samples_ms": [
+        185.558717,
+        187.328567,
+        193.573125,
+        185.523329,
+        185.774741
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 0,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 31.051955,
+      "workload": "decode"
+    },
+    {
+      "block": 1,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.871105,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.852702,
+        3.838031,
+        3.878166,
+        3.871173,
+        3.871105
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 1,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.282751,
+      "prompt_length": 64,
+      "samples_ms": [
+        3.312394,
+        3.279986,
+        3.182257,
+        3.296505,
+        3.282751
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 1,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 19.92819,
+      "prompt_length": 256,
+      "samples_ms": [
+        19.92819,
+        19.970625,
+        19.912713,
+        19.909539,
+        20.017545
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 1,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 85.663537,
+      "prompt_length": 1024,
+      "samples_ms": [
+        85.663537,
+        85.211048,
+        90.658638,
+        87.133031,
+        85.641631
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 1,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 31.203756,
+      "workload": "decode"
+    },
+    {
+      "block": 2,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.907763,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.915826,
+        3.811435,
+        3.907763,
+        3.966241,
+        3.838459
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 2,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.10176,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.104703,
+        1.10176,
+        1.144367,
+        1.065091,
+        1.054364
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 2,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 6.814644,
+      "prompt_length": 256,
+      "samples_ms": [
+        6.836573,
+        6.889463,
+        6.814644,
+        6.720362,
+        6.647139
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 2,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 27.870136,
+      "prompt_length": 1024,
+      "samples_ms": [
+        27.829152,
+        27.832167,
+        28.034251,
+        27.999153,
+        27.870136
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 2,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 31.510922,
+      "workload": "decode"
+    },
+    {
+      "block": 3,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.831028,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.831028,
+        3.767432,
+        3.922503,
+        3.849754,
+        3.725106
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 3,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.098016,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.12295,
+        1.072973,
+        1.117082,
+        1.098016,
+        1.091305
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 3,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 10.230046,
+      "prompt_length": 256,
+      "samples_ms": [
+        10.230046,
+        10.338079,
+        10.218823,
+        10.221645,
+        10.311743
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 3,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 40.544426,
+      "prompt_length": 1024,
+      "samples_ms": [
+        40.572647,
+        40.406357,
+        40.835592,
+        40.544426,
+        40.51809
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 3,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 30.794581,
+      "workload": "decode"
+    },
+    {
+      "block": 4,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.79181,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.840205,
+        3.839982,
+        3.769967,
+        3.688274,
+        3.79181
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 4,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.098313,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.07961,
+        1.113104,
+        1.130898,
+        1.04616,
+        1.098313
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 4,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.749184,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.679459,
+        4.749184,
+        4.914605,
+        4.785251,
+        4.607643
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 4,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 23.664651,
+      "prompt_length": 1024,
+      "samples_ms": [
+        24.979263,
+        23.340401,
+        23.752634,
+        23.427247,
+        23.664651
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 4,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 31.228236,
+      "workload": "decode"
+    },
+    {
+      "block": 5,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.703542,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.703542,
+        3.702351,
+        3.769485,
+        4.083595,
+        3.639882
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 5,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.110924,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.110924,
+        1.118909,
+        1.11784,
+        1.087004,
+        1.046036
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 5,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.399569,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.399569,
+        4.425681,
+        4.285326,
+        4.322127,
+        4.766347
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 5,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 19.696413,
+      "prompt_length": 1024,
+      "samples_ms": [
+        20.015084,
+        21.156637,
+        19.30684,
+        19.061337,
+        19.696413
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 5,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 31.080533,
+      "workload": "decode"
+    },
+    {
+      "block": 6,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.850617,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.900298,
+        3.922059,
+        3.797365,
+        3.836706,
+        3.850617
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 6,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.104918,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.116061,
+        1.104918,
+        1.101156,
+        1.072319,
+        1.106199
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 6,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.429653,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.429653,
+        4.319315,
+        4.463397,
+        4.373193,
+        4.443979
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 6,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 19.133015,
+      "prompt_length": 1024,
+      "samples_ms": [
+        19.133182,
+        19.161206,
+        18.928832,
+        19.133015,
+        19.013794
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 6,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 31.586927,
+      "workload": "decode"
+    },
+    {
+      "block": 7,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.704255,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.704255,
+        3.823906,
+        3.722467,
+        3.516357,
+        3.575276
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 7,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.187443,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.472796,
+        1.503731,
+        1.187443,
+        1.167809,
+        1.110667
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 7,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.423061,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.423061,
+        4.380096,
+        5.251927,
+        4.539744,
+        4.287962
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 7,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 19.085232,
+      "prompt_length": 1024,
+      "samples_ms": [
+        19.985595,
+        19.15038,
+        19.030711,
+        18.911076,
+        19.085232
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 7,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 30.311907,
+      "workload": "decode"
+    },
+    {
+      "block": 8,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.821496,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.831269,
+        3.821496,
+        3.792003,
+        4.351284,
+        3.592765
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 8,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.130832,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.130832,
+        1.102599,
+        1.144172,
+        1.086604,
+        1.301657
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 8,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.342519,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.437676,
+        4.384301,
+        4.305259,
+        4.33085,
+        4.342519
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 8,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 19.352237,
+      "prompt_length": 1024,
+      "samples_ms": [
+        18.971035,
+        19.352237,
+        20.663874,
+        19.360488,
+        18.88678
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 8,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 28.481978,
+      "workload": "decode"
+    },
+    {
+      "block": 9,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.77913,
+      "prompt_length": 16,
+      "samples_ms": [
+        4.00236,
+        3.721155,
+        3.77913,
+        3.843264,
+        3.744031
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 9,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.135249,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.166654,
+        1.099411,
+        1.282325,
+        1.135249,
+        1.108208
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 9,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.402603,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.432225,
+        4.449505,
+        4.323106,
+        4.402603,
+        4.343846
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 9,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 19.399919,
+      "prompt_length": 1024,
+      "samples_ms": [
+        21.974753,
+        19.083349,
+        18.924271,
+        23.767806,
+        19.399919
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 9,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 31.053353,
+      "workload": "decode"
+    },
+    {
+      "block": 10,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.916435,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.923869,
+        3.928714,
+        3.916435,
+        3.693225,
+        3.703489
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 10,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.092611,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.075523,
+        1.089619,
+        1.125529,
+        1.144546,
+        1.092611
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 10,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.357659,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.357659,
+        4.309202,
+        4.39535,
+        4.422418,
+        4.314659
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 10,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 19.267963,
+      "prompt_length": 1024,
+      "samples_ms": [
+        19.661371,
+        19.267963,
+        19.271558,
+        19.217465,
+        19.204978
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 10,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 31.873335,
+      "workload": "decode"
+    },
+    {
+      "block": 11,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.858249,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.821348,
+        3.93256,
+        3.858249,
+        3.811946,
+        3.894959
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 11,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.153851,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.153851,
+        1.172362,
+        1.195619,
+        1.121214,
+        1.122619
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 11,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.492329,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.651965,
+        4.528826,
+        4.451324,
+        4.492329,
+        4.462577
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 11,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 20.358283,
+      "prompt_length": 1024,
+      "samples_ms": [
+        19.49864,
+        20.358283,
+        21.756344,
+        22.307128,
+        20.179013
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 11,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 31.715037,
+      "workload": "decode"
+    },
+    {
+      "block": 12,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.024044,
+      "prompt_length": 16,
+      "samples_ms": [
+        4.049622,
+        4.024044,
+        4.028501,
+        3.962797,
+        3.734305
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 12,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.121135,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.162936,
+        1.128353,
+        1.121135,
+        1.090625,
+        1.106102
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 12,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.47654,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.47654,
+        4.615016,
+        4.408978,
+        4.461656,
+        4.56142
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 12,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 20.201216,
+      "prompt_length": 1024,
+      "samples_ms": [
+        20.476292,
+        20.201216,
+        19.465731,
+        20.470976,
+        19.754678
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 12,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 32.768048,
+      "workload": "decode"
+    },
+    {
+      "block": 13,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.974335,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.901554,
+        3.960086,
+        3.974335,
+        4.009686,
+        4.353204
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 13,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.11398,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.106814,
+        1.156747,
+        1.118017,
+        1.11398,
+        1.073666
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 13,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.439724,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.491181,
+        4.439724,
+        4.448895,
+        4.413463,
+        4.341397
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 13,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 18.84216,
+      "prompt_length": 1024,
+      "samples_ms": [
+        19.682417,
+        18.703323,
+        18.84216,
+        18.798246,
+        18.902965
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 13,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 28.775249,
+      "workload": "decode"
+    },
+    {
+      "block": 14,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.521183,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.584093,
+        3.521183,
+        3.706742,
+        3.457511,
+        3.46858
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 14,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.08692,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.08692,
+        1.082477,
+        1.099522,
+        1.110267,
+        1.063892
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 14,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.460275,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.523316,
+        4.503439,
+        4.369198,
+        4.322186,
+        4.460275
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 14,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 19.111396,
+      "prompt_length": 1024,
+      "samples_ms": [
+        20.596339,
+        18.89025,
+        18.599318,
+        19.165671,
+        19.111396
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 14,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 28.851473,
+      "workload": "decode"
+    },
+    {
+      "block": 15,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.549842,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.517021,
+        3.549842,
+        3.566176,
+        3.578366,
+        3.483781
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 15,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.116908,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.315233,
+        1.101261,
+        1.096069,
+        1.161232,
+        1.116908
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 15,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.419066,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.379364,
+        4.597369,
+        4.419066,
+        4.412917,
+        4.445501
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 15,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 18.981033,
+      "prompt_length": 1024,
+      "samples_ms": [
+        19.681011,
+        18.962468,
+        18.981033,
+        19.514392,
+        18.920182
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 15,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 29.671777,
+      "workload": "decode"
+    },
+    {
+      "block": 16,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.451705,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.450921,
+        3.451705,
+        3.510296,
+        3.519651,
+        3.430314
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 16,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.095201,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.096567,
+        1.082689,
+        1.095201,
+        1.1805,
+        1.058623
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 16,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.430232,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.430232,
+        4.378541,
+        4.285197,
+        4.438866,
+        4.490814
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 16,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 19.154301,
+      "prompt_length": 1024,
+      "samples_ms": [
+        18.813972,
+        19.154301,
+        18.916441,
+        19.336996,
+        19.269388
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 16,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 30.579637,
+      "workload": "decode"
+    },
+    {
+      "block": 17,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.708459,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.707597,
+        3.650613,
+        3.708459,
+        3.759379,
+        3.826449
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 17,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.104831,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.141762,
+        1.104831,
+        1.09393,
+        1.120901,
+        1.084839
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 17,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.391084,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.479848,
+        4.338681,
+        4.353918,
+        4.622889,
+        4.391084
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 17,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 19.021309,
+      "prompt_length": 1024,
+      "samples_ms": [
+        19.021309,
+        19.00328,
+        20.681141,
+        18.903262,
+        19.049333
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 17,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 30.966548,
+      "workload": "decode"
+    },
+    {
+      "block": 18,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.810706,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.804339,
+        3.837511,
+        3.81084,
+        3.810706,
+        3.686989
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 18,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.073658,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.154322,
+        1.073658,
+        1.066311,
+        1.071613,
+        1.121647
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 18,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.379402,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.407202,
+        4.385965,
+        4.379402,
+        4.360759,
+        4.376481
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 18,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 19.278874,
+      "prompt_length": 1024,
+      "samples_ms": [
+        19.278874,
+        19.012897,
+        23.723327,
+        20.539645,
+        19.187906
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 18,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 31.52915,
+      "workload": "decode"
+    },
+    {
+      "block": 19,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.744248,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.807205,
+        3.642194,
+        3.632622,
+        3.84332,
+        3.744248
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 19,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.094424,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.161554,
+        1.094424,
+        1.088278,
+        1.077649,
+        1.108273
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 19,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.466763,
+      "prompt_length": 256,
+      "samples_ms": [
+        4.355802,
+        4.730075,
+        4.466763,
+        4.416425,
+        5.58751
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 19,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 19.249989,
+      "prompt_length": 1024,
+      "samples_ms": [
+        20.17413,
+        19.249989,
+        20.89461,
+        18.433365,
+        18.397655
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 19,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 28.864166,
+      "workload": "decode"
+    },
+    {
+      "block": 20,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.522446,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.697031,
+        3.605109,
+        3.522446,
+        3.513107,
+        3.459751
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 20,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.050615,
+      "prompt_length": 64,
+      "samples_ms": [
+        4.08214,
+        4.071939,
+        4.047398,
+        4.050615,
+        4.024589
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 20,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 20.525183,
+      "prompt_length": 256,
+      "samples_ms": [
+        20.186889,
+        20.326247,
+        20.596313,
+        20.525183,
+        20.666607
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 20,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 83.730023,
+      "prompt_length": 1024,
+      "samples_ms": [
+        83.730023,
+        87.329721,
+        84.237885,
+        82.288392,
+        81.947931
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 20,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 28.2869,
+      "workload": "decode"
+    },
+    {
+      "block": 21,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.457897,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.471791,
+        3.457897,
+        3.487507,
+        3.439616,
+        3.445798
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 21,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 1.138509,
+      "prompt_length": 64,
+      "samples_ms": [
+        1.099812,
+        1.090865,
+        1.210891,
+        1.140024,
+        1.138509
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 21,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 5.301584,
+      "prompt_length": 256,
+      "samples_ms": [
+        5.451351,
+        5.291498,
+        5.20762,
+        5.301584,
+        5.366747
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 21,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 23.521253,
+      "prompt_length": 1024,
+      "samples_ms": [
+        23.428209,
+        23.616933,
+        23.295196,
+        23.521253,
+        23.835827
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 21,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 31.626189,
+      "workload": "decode"
+    },
+    {
+      "block": 22,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.969724,
+      "prompt_length": 16,
+      "samples_ms": [
+        3.988326,
+        3.952986,
+        3.969724,
+        4.164811,
+        3.968438
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 22,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 6.141385,
+      "prompt_length": 64,
+      "samples_ms": [
+        6.206083,
+        6.16649,
+        6.115638,
+        6.097005,
+        6.141385
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 22,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 37.820059,
+      "prompt_length": 256,
+      "samples_ms": [
+        38.26439,
+        38.166133,
+        37.820059,
+        36.692797,
+        36.563113
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 22,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 129.278583,
+      "prompt_length": 1024,
+      "samples_ms": [
+        130.317015,
+        126.499372,
+        129.278583,
+        128.213572,
+        129.415609
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 22,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 31.344897,
+      "workload": "decode"
+    },
+    {
+      "block": 23,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 3.941833,
+      "prompt_length": 16,
+      "samples_ms": [
+        4.184129,
+        3.820404,
+        3.941833,
+        3.903603,
+        4.124589
+      ],
+      "scope": "adapter_core",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "block": 23,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 4.801484,
+      "prompt_length": 64,
+      "samples_ms": [
+        4.828592,
+        4.824712,
+        4.798605,
+        4.801484,
+        4.78743
+      ],
+      "scope": "adapter_core",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "block": 23,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 25.916511,
+      "prompt_length": 256,
+      "samples_ms": [
+        25.774129,
+        25.854348,
+        25.945685,
+        26.272809,
+        25.916511
+      ],
+      "scope": "adapter_core",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "block": 23,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "median_ms": 117.164495,
+      "prompt_length": 1024,
+      "samples_ms": [
+        116.659615,
+        120.092113,
+        116.77384,
+        117.164495,
+        118.933409
+      ],
+      "scope": "adapter_core",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "block": 23,
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8115
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          80493
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "adapter_core",
+      "token_count": 128,
+      "trajectory_ms": 32.242648,
+      "workload": "decode"
+    }
+  ],
+  "model": {
+    "embedding_dim": 1536,
+    "eps": 1e-06,
+    "hidden_size": 1536,
+    "key_dim": 192,
+    "num_blocks": 24,
+    "num_heads": 4,
+    "num_hidden_layers": 24,
+    "parameter_count": 841496256,
+    "value_dim": 384,
+    "vocab_size": 50304
+  },
+  "numerical_acceptance": "passed",
+  "runtime": {
+    "environment": {
+      "MKL_DYNAMIC": "FALSE",
+      "MKL_NUM_THREADS": "1",
+      "MLSTM_BENCH_CPUS": "0",
+      "MLSTM_THREADS": "1",
+      "OMP_DYNAMIC": "FALSE",
+      "OMP_MAX_ACTIVE_LEVELS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OMP_PLACES": "{0}",
+      "OMP_PROC_BIND": "close",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "parallel_info": "ATen/Parallel:\n\tat::get_num_threads() : 1\n\tat::get_num_interop_threads() : 1\nOpenMP 201511 (a.k.a. OpenMP 4.5)\n\tomp_get_max_threads() : 1\nIntel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n\tmkl_get_max_threads() : 1\nIntel(R) MKL-DNN v3.11.2 (Git Hash 03c022d3ffdcee958cfacbe720048e725fdf644c)\nstd::thread::hardware_concurrency() : 24\nEnvironment variables:\n\tOMP_NUM_THREADS : 1\n\tMKL_NUM_THREADS : 1\nATen parallel backend: OpenMP\n"
+  },
+  "started_utc": "2026-10-17T18:46:54.536322+00:00"
+}

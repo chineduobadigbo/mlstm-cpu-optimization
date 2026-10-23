@@ -1,0 +1,1167 @@
+{
+  "host": {
+    "cpu_model": "13th Gen Intel(R) Core(TM) i7-13700K",
+    "kernel": "6.18.54.1-microsoft-standard-WSL2",
+    "memory_gib": 30.6,
+    "os": "Ubuntu 22.04.5 LTS",
+    "python": "3.11.15",
+    "torch": "2.12.0+cpu",
+    "torch_config": "PyTorch built with:\n  - GCC 13.3\n  - C++ Version: 202002\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.11.2 (Git Hash 03c022d3ffdcee958cfacbe720048e725fdf644c)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=7661cd9c6b841b62b7f411aa52ec51f05457263b, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all  -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CXX_COMPILER=/opt/rh/gcc-toolset-13/root/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=old-style-cast -faligned-new -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-dangling-reference -Wno-error=dangling-reference -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.12.0, USE_CUDA=0, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n",
+    "transformers": "5.9.0"
+  },
+  "model": {
+    "embedding_dim": 1536,
+    "eps": 1e-06,
+    "hidden_size": 1536,
+    "key_dim": 192,
+    "num_blocks": 24,
+    "num_heads": 4,
+    "num_hidden_layers": 24,
+    "parameter_count": 841496256,
+    "value_dim": 384,
+    "vocab_size": 50304
+  },
+  "records": [
+    {
+      "baseline": "official",
+      "baseline_ms": 127.280224,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 78.59066,
+      "numerical_acceptance": "passed",
+      "pair_index": 0,
+      "prompt_length": 16,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 194.478299,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 186.425764,
+      "numerical_acceptance": "passed",
+      "pair_index": 0,
+      "prompt_length": 64,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 615.705556,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 569.883201,
+      "numerical_acceptance": "passed",
+      "pair_index": 0,
+      "prompt_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 2141.021168,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 2134.235862,
+      "numerical_acceptance": "passed",
+      "pair_index": 0,
+      "prompt_length": 1024,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 6620.444939,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 5922.178301,
+      "decode_length": 128,
+      "numerical_acceptance": "passed",
+      "pair_index": 0,
+      "prefill_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 128,
+      "workload": "decode"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 131.485083,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 73.847226,
+      "numerical_acceptance": "passed",
+      "pair_index": 1,
+      "prompt_length": 16,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 198.214581,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 190.032361,
+      "numerical_acceptance": "passed",
+      "pair_index": 1,
+      "prompt_length": 64,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 596.419997,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 575.395246,
+      "numerical_acceptance": "passed",
+      "pair_index": 1,
+      "prompt_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 2024.612083,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 2211.914999,
+      "numerical_acceptance": "passed",
+      "pair_index": 1,
+      "prompt_length": 1024,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 6380.920683,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 5940.738906,
+      "decode_length": 128,
+      "numerical_acceptance": "passed",
+      "pair_index": 1,
+      "prefill_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 128,
+      "workload": "decode"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 124.044077,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 76.553668,
+      "numerical_acceptance": "passed",
+      "pair_index": 2,
+      "prompt_length": 16,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 199.938753,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 186.283256,
+      "numerical_acceptance": "passed",
+      "pair_index": 2,
+      "prompt_length": 64,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 609.030949,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 570.857915,
+      "numerical_acceptance": "passed",
+      "pair_index": 2,
+      "prompt_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 2184.206642,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 2053.768032,
+      "numerical_acceptance": "passed",
+      "pair_index": 2,
+      "prompt_length": 1024,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 6412.393366,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 6024.436385,
+      "decode_length": 128,
+      "numerical_acceptance": "passed",
+      "pair_index": 2,
+      "prefill_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 128,
+      "workload": "decode"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 130.800784,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 60.679143,
+      "numerical_acceptance": "passed",
+      "pair_index": 3,
+      "prompt_length": 16,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 201.086329,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 180.564219,
+      "numerical_acceptance": "passed",
+      "pair_index": 3,
+      "prompt_length": 64,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 537.85534,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 549.173932,
+      "numerical_acceptance": "passed",
+      "pair_index": 3,
+      "prompt_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 2061.727831,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 2166.821969,
+      "numerical_acceptance": "passed",
+      "pair_index": 3,
+      "prompt_length": 1024,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 6352.414061,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 5682.396197,
+      "decode_length": 128,
+      "numerical_acceptance": "passed",
+      "pair_index": 3,
+      "prefill_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 128,
+      "workload": "decode"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 125.40892,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 72.944151,
+      "numerical_acceptance": "passed",
+      "pair_index": 4,
+      "prompt_length": 16,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 206.200574,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 182.682614,
+      "numerical_acceptance": "passed",
+      "pair_index": 4,
+      "prompt_length": 64,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 612.475067,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 554.464525,
+      "numerical_acceptance": "passed",
+      "pair_index": 4,
+      "prompt_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 2065.106507,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 2088.688436,
+      "numerical_acceptance": "passed",
+      "pair_index": 4,
+      "prompt_length": 1024,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 6521.394207,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 5730.029012,
+      "decode_length": 128,
+      "numerical_acceptance": "passed",
+      "pair_index": 4,
+      "prefill_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 128,
+      "workload": "decode"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 128.817202,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 76.599496,
+      "numerical_acceptance": "passed",
+      "pair_index": 5,
+      "prompt_length": 16,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 181.556066,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 198.055042,
+      "numerical_acceptance": "passed",
+      "pair_index": 5,
+      "prompt_length": 64,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 623.441788,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 576.141773,
+      "numerical_acceptance": "passed",
+      "pair_index": 5,
+      "prompt_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 2121.799934,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 2120.224415,
+      "numerical_acceptance": "passed",
+      "pair_index": 5,
+      "prompt_length": 1024,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 6434.352256,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 5969.544555,
+      "decode_length": 128,
+      "numerical_acceptance": "passed",
+      "pair_index": 5,
+      "prefill_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 128,
+      "workload": "decode"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 116.289651,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 74.044449,
+      "numerical_acceptance": "passed",
+      "pair_index": 6,
+      "prompt_length": 16,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 174.668445,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 202.026379,
+      "numerical_acceptance": "passed",
+      "pair_index": 6,
+      "prompt_length": 64,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 585.464111,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 589.922937,
+      "numerical_acceptance": "passed",
+      "pair_index": 6,
+      "prompt_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 2064.406172,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 2084.705029,
+      "numerical_acceptance": "passed",
+      "pair_index": 6,
+      "prompt_length": 1024,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 6283.091875,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 6180.337976,
+      "decode_length": 128,
+      "numerical_acceptance": "passed",
+      "pair_index": 6,
+      "prefill_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 128,
+      "workload": "decode"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 131.548381,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 71.976514,
+      "numerical_acceptance": "passed",
+      "pair_index": 7,
+      "prompt_length": 16,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 189.684966,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 180.986478,
+      "numerical_acceptance": "passed",
+      "pair_index": 7,
+      "prompt_length": 64,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 587.588955,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 565.246582,
+      "numerical_acceptance": "passed",
+      "pair_index": 7,
+      "prompt_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 2151.023281,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 2252.649871,
+      "numerical_acceptance": "passed",
+      "pair_index": 7,
+      "prompt_length": 1024,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "baseline": "official",
+      "baseline_ms": 6162.539701,
+      "block": null,
+      "candidate": "local_kernel",
+      "candidate_ms": 5908.226621,
+      "decode_length": 128,
+      "numerical_acceptance": "passed",
+      "pair_index": 7,
+      "prefill_length": 256,
+      "scope": "full_model",
+      "threads": 16,
+      "token_count": 128,
+      "workload": "decode"
+    }
+  ],
+  "run": {
+    "backends": [
+      "official",
+      "local_kernel"
+    ],
+    "checkpoint": "mlstm_v1--tokenparam--ctx-8192--params-841.5M--tokens-926.94B--id-m97a5wxv",
+    "configuration": "avx2_c_t_fused_r16_bhtd",
+    "execution": {
+      "local_kernel": {
+        "compile": null,
+        "mode": "eager"
+      },
+      "official": {
+        "compile": null,
+        "mode": "eager"
+      }
+    },
+    "fp_policy": "default",
+    "in_model_cells": true,
+    "kernel": "avx2_c_t_fused_r16_bhtd",
+    "native_threads": 1,
+    "numerical_acceptance": "passed",
+    "pair_count": 8,
+    "prefill_only": null,
+    "scopes": [
+      "full_model"
+    ],
+    "threads": [
+      16
+    ],
+    "workloads": [
+      "prompt",
+      "decode"
+    ]
+  },
+  "validation": {
+    "backends": [
+      "official",
+      "local_kernel"
+    ],
+    "checkpoint": "mlstm_v1--tokenparam--ctx-8192--params-841.5M--tokens-926.94B--id-m97a5wxv",
+    "execution": {
+      "local_kernel": {
+        "compile": null,
+        "mode": "eager"
+      },
+      "official": {
+        "compile": null,
+        "mode": "eager"
+      }
+    },
+    "fp_policy": "default",
+    "fp_probe": {
+      "compiler": "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+      "openmp": "libgomp.so.1"
+    },
+    "prefill_only": null,
+    "status": "passed",
+    "thread_checks": [
+      {
+        "affinity": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "backends": [
+          "official",
+          "local_kernel"
+        ],
+        "compiled_checks": [],
+        "configuration": "avx2_c_t_fused_r16_bhtd",
+        "execution": {
+          "local_kernel": {
+            "compile": null,
+            "mode": "eager"
+          },
+          "official": {
+            "compile": null,
+            "mode": "eager"
+          }
+        },
+        "fixture": {
+          "bos_token_id": 0,
+          "tokenizer": {
+            "class": "GPTNeoXTokenizer",
+            "repository": "NX-AI/xLSTM-7b",
+            "revision": "9dc507bd0939cf372a4a4f667335651d8e49dddb"
+          }
+        },
+        "fp_after": {
+          "cpus": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "mxcsr": [
+            8115,
+            8115,
+            8115,
+            8115,
+            8115,
+            8115,
+            8115,
+            8115,
+            8115,
+            8115,
+            8115,
+            8115,
+            8115,
+            8115,
+            8115,
+            8115
+          ],
+          "observed_threads": 16,
+          "policy": "default",
+          "tids": [
+            3822530,
+            3822546,
+            3822547,
+            3822548,
+            3822549,
+            3822550,
+            3822551,
+            3822552,
+            3822553,
+            3822554,
+            3822555,
+            3822556,
+            3822557,
+            3822558,
+            3822559,
+            3822560
+          ]
+        },
+        "fp_before": {
+          "cpus": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "mxcsr": [
+            8097,
+            8097,
+            8097,
+            8097,
+            8097,
+            8097,
+            8097,
+            8097,
+            8097,
+            8097,
+            8097,
+            8097,
+            8097,
+            8097,
+            8097,
+            8097
+          ],
+          "observed_threads": 16,
+          "policy": "default",
+          "tids": [
+            3822530,
+            3822546,
+            3822547,
+            3822548,
+            3822549,
+            3822550,
+            3822551,
+            3822552,
+            3822553,
+            3822554,
+            3822555,
+            3822556,
+            3822557,
+            3822558,
+            3822559,
+            3822560
+          ]
+        },
+        "kernel": "avx2_c_t_fused_r16_bhtd",
+        "load": {
+          "config_changes": {
+            "autocast_kernel_dtype": {
+              "effective": "float32",
+              "raw": "bfloat16"
+            },
+            "chunkwise_kernel": {
+              "effective": "chunkwise--native_autograd",
+              "raw": "chunkwise--triton_limit_chunk"
+            },
+            "hidden_size": {
+              "effective": 1536,
+              "raw": null
+            },
+            "mode": {
+              "effective": "inference",
+              "raw": "train"
+            },
+            "num_hidden_layers": {
+              "effective": 24,
+              "raw": null
+            },
+            "return_last_states": {
+              "effective": true,
+              "raw": false
+            },
+            "sequence_kernel": {
+              "effective": "native_sequence__native",
+              "raw": "native_sequence__triton"
+            },
+            "step_kernel": {
+              "effective": "native",
+              "raw": "triton"
+            }
+          },
+          "validation": {
+            "embedding_dim": 1536,
+            "eps": 1e-06,
+            "hidden_size": 1536,
+            "key_dim": 192,
+            "num_blocks": 24,
+            "num_heads": 4,
+            "num_hidden_layers": 24,
+            "parameter_count": 841496256,
+            "value_dim": 384,
+            "vocab_size": 50304
+          }
+        },
+        "model_pair": {
+          "checked": "logits, all layer C/n/m states and cache offset after every call",
+          "decode_steps": 128,
+          "pair": [
+            "official",
+            "local_kernel"
+          ],
+          "prefill_length": 256,
+          "prompt_lengths": [
+            16,
+            64,
+            256,
+            1024
+          ],
+          "status": "passed",
+          "tolerance": {
+            "atol": 0.0001,
+            "rtol": 0.001
+          }
+        },
+        "prefill_only": null,
+        "recurrence": [
+          {
+            "backend": "local_kernel",
+            "reference_backend": "official",
+            "status": "passed",
+            "workload": "prefill"
+          },
+          {
+            "backend": "local_kernel",
+            "reference_backend": "official",
+            "status": "passed",
+            "workload": "warm_step"
+          }
+        ],
+        "reference_backend": "official",
+        "status": "passed",
+        "threads": 16
+      }
+    ],
+    "timing_permitted": true,
+    "topology": {
+      "cpus": [
+        {
+          "core_id": 0,
+          "cpu": 0,
+          "thread_siblings_list": "0-1"
+        },
+        {
+          "core_id": 0,
+          "cpu": 1,
+          "thread_siblings_list": "0-1"
+        },
+        {
+          "core_id": 1,
+          "cpu": 2,
+          "thread_siblings_list": "2-3"
+        },
+        {
+          "core_id": 1,
+          "cpu": 3,
+          "thread_siblings_list": "2-3"
+        },
+        {
+          "core_id": 2,
+          "cpu": 4,
+          "thread_siblings_list": "4-5"
+        },
+        {
+          "core_id": 2,
+          "cpu": 5,
+          "thread_siblings_list": "4-5"
+        },
+        {
+          "core_id": 3,
+          "cpu": 6,
+          "thread_siblings_list": "6-7"
+        },
+        {
+          "core_id": 3,
+          "cpu": 7,
+          "thread_siblings_list": "6-7"
+        },
+        {
+          "core_id": 4,
+          "cpu": 8,
+          "thread_siblings_list": "8-9"
+        },
+        {
+          "core_id": 4,
+          "cpu": 9,
+          "thread_siblings_list": "8-9"
+        },
+        {
+          "core_id": 5,
+          "cpu": 10,
+          "thread_siblings_list": "10-11"
+        },
+        {
+          "core_id": 5,
+          "cpu": 11,
+          "thread_siblings_list": "10-11"
+        },
+        {
+          "core_id": 6,
+          "cpu": 12,
+          "thread_siblings_list": "12-13"
+        },
+        {
+          "core_id": 6,
+          "cpu": 13,
+          "thread_siblings_list": "12-13"
+        },
+        {
+          "core_id": 7,
+          "cpu": 14,
+          "thread_siblings_list": "14-15"
+        },
+        {
+          "core_id": 7,
+          "cpu": 15,
+          "thread_siblings_list": "14-15"
+        }
+      ],
+      "lscpu": {
+        "lscpu": [
+          {
+            "data": "x86_64",
+            "field": "Architecture:"
+          },
+          {
+            "data": "32-bit, 64-bit",
+            "field": "CPU op-mode(s):"
+          },
+          {
+            "data": "46 bits physical, 48 bits virtual",
+            "field": "Address sizes:"
+          },
+          {
+            "data": "Little Endian",
+            "field": "Byte Order:"
+          },
+          {
+            "data": "24",
+            "field": "CPU(s):"
+          },
+          {
+            "data": "0-23",
+            "field": "On-line CPU(s) list:"
+          },
+          {
+            "data": "GenuineIntel",
+            "field": "Vendor ID:"
+          },
+          {
+            "data": "13th Gen Intel(R) Core(TM) i7-13700K",
+            "field": "Model name:"
+          },
+          {
+            "data": "6",
+            "field": "CPU family:"
+          },
+          {
+            "data": "183",
+            "field": "Model:"
+          },
+          {
+            "data": "2",
+            "field": "Thread(s) per core:"
+          },
+          {
+            "data": "12",
+            "field": "Core(s) per socket:"
+          },
+          {
+            "data": "1",
+            "field": "Socket(s):"
+          },
+          {
+            "data": "1",
+            "field": "Stepping:"
+          },
+          {
+            "data": "6835.20",
+            "field": "BogoMIPS:"
+          },
+          {
+            "data": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities",
+            "field": "Flags:"
+          },
+          {
+            "data": "VT-x",
+            "field": "Virtualization:"
+          },
+          {
+            "data": "Microsoft",
+            "field": "Hypervisor vendor:"
+          },
+          {
+            "data": "full",
+            "field": "Virtualization type:"
+          },
+          {
+            "data": "576 KiB (12 instances)",
+            "field": "L1d cache:"
+          },
+          {
+            "data": "384 KiB (12 instances)",
+            "field": "L1i cache:"
+          },
+          {
+            "data": "24 MiB (12 instances)",
+            "field": "L2 cache:"
+          },
+          {
+            "data": "30 MiB (1 instance)",
+            "field": "L3 cache:"
+          },
+          {
+            "data": "1",
+            "field": "NUMA node(s):"
+          },
+          {
+            "data": "0-23",
+            "field": "NUMA node0 CPU(s):"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Gather data sampling:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Ghostwrite:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Indirect target selection:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Itlb multihit:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability L1tf:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Mds:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Meltdown:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Mmio stale data:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Old microcode:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Reg file data sampling:"
+          },
+          {
+            "data": "Mitigation; Enhanced IBRS",
+            "field": "Vulnerability Retbleed:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Spec rstack overflow:"
+          },
+          {
+            "data": "Mitigation; Speculative Store Bypass disabled via prctl",
+            "field": "Vulnerability Spec store bypass:"
+          },
+          {
+            "data": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization",
+            "field": "Vulnerability Spectre v1:"
+          },
+          {
+            "data": "Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S",
+            "field": "Vulnerability Spectre v2:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Srbds:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Tsa:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Tsx async abort:"
+          },
+          {
+            "data": "Not affected",
+            "field": "Vulnerability Vmscape:"
+          }
+        ]
+      }
+    }
+  }
+}

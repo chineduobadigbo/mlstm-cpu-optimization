@@ -1,0 +1,476 @@
+{
+  "largest_threads": 16,
+  "model_841M": {
+    "rule": "argmin W_1*W_max with W_p(c) = L(c, T=256, p) + 128*L(dec(c), T=1, p)",
+    "candidates": {
+      "avx2_c_t_fused_r16_bhtd": {
+        "decode": "avx2_c_t_fused_r16_bhtd",
+        "W_1": 4.9310849999999995,
+        "W_max": 1.9166765,
+        "product": 9.451294739002499
+      },
+      "avx2_c_t_fused_r16_bhtd:split": {
+        "decode": "avx2_c_t_fused_r16_bhtd:split",
+        "W_1": 4.9310849999999995,
+        "W_max": 2.084592,
+        "product": 10.279300342319997
+      },
+      "chunkwise_avx2_bhtd:4": {
+        "decode": "chunkwise_avx2_bhtd:4",
+        "W_1": 5.821066999999999,
+        "W_max": 1.9142365,
+        "product": 11.142898920345498
+      },
+      "chunkwise_avx2_bhtd:4:split": {
+        "decode": "chunkwise_avx2_bhtd:4:split",
+        "W_1": 5.821066999999999,
+        "W_max": 2.4246725,
+        "product": 14.114181075557497
+      },
+      "chunkwise_avx2_bhtd:8": {
+        "decode": "chunkwise_avx2_bhtd:4",
+        "W_1": 7.0057215,
+        "W_max": 2.210867,
+        "product": 15.4887184755405
+      },
+      "chunkwise_avx2_bhtd:8:split": {
+        "decode": "chunkwise_avx2_bhtd:4:split",
+        "W_1": 7.0057215,
+        "W_max": 2.672348,
+        "product": 18.721725839081998
+      },
+      "chunkwise_blas_bhtd:32": {
+        "decode": "chunkwise_blas_bhtd:32",
+        "W_1": 5.5178735,
+        "W_max": 3.9445509999999997,
+        "product": 21.7655334322985
+      },
+      "recurrent_avx2_panelwise_bhtd": {
+        "decode": "recurrent_avx2_panelwise_bhtd",
+        "W_1": 5.438812499999999,
+        "W_max": 2.2456125,
+        "product": 12.213465335156249
+      }
+    },
+    "choice": "avx2_c_t_fused_r16_bhtd"
+  },
+  "model_142B": {
+    "rule": "argmin L(c, (1,1024,4,256,512), largest thread count)",
+    "candidates": {
+      "chunkwise_avx2_bhtd:4": 4.3422105,
+      "chunkwise_avx2_bhtd:8": 6.3399125,
+      "chunkwise_blas_bhtd:32": 3.562563,
+      "avx2_c_t_fused_r16_bhtd:split": 5.1387445,
+      "chunkwise_avx2_bhtd:4:split": 4.569623999999999,
+      "chunkwise_avx2_bhtd:8:split": 4.629611499999999,
+      "avx2_c_t_fused_r16_bhtd": 5.4035945,
+      "recurrent_avx2_panelwise_bhtd": 4.7945329999999995
+    },
+    "choice": "chunkwise_blas_bhtd:32"
+  },
+  "latencies": [
+    {
+      "configuration": "avx2_c_t_fused_r16_bhtd",
+      "shape": [
+        1,
+        1,
+        4,
+        192,
+        384
+      ],
+      "threads": 1,
+      "latency_ms": 0.016022,
+      "n": 5
+    },
+    {
+      "configuration": "avx2_c_t_fused_r16_bhtd",
+      "shape": [
+        1,
+        1,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.008908,
+      "n": 5
+    },
+    {
+      "configuration": "avx2_c_t_fused_r16_bhtd",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 1,
+      "latency_ms": 2.8802689999999997,
+      "n": 5
+    },
+    {
+      "configuration": "avx2_c_t_fused_r16_bhtd",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.7764525,
+      "n": 5
+    },
+    {
+      "configuration": "avx2_c_t_fused_r16_bhtd",
+      "shape": [
+        1,
+        1024,
+        4,
+        256,
+        512
+      ],
+      "threads": 16,
+      "latency_ms": 5.4035945,
+      "n": 5
+    },
+    {
+      "configuration": "avx2_c_t_fused_r16_bhtd:split",
+      "shape": [
+        1,
+        1,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.0097275,
+      "n": 5
+    },
+    {
+      "configuration": "avx2_c_t_fused_r16_bhtd:split",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.839472,
+      "n": 5
+    },
+    {
+      "configuration": "avx2_c_t_fused_r16_bhtd:split",
+      "shape": [
+        1,
+        1024,
+        4,
+        256,
+        512
+      ],
+      "threads": 16,
+      "latency_ms": 5.1387445,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:4",
+      "shape": [
+        1,
+        1,
+        4,
+        192,
+        384
+      ],
+      "threads": 1,
+      "latency_ms": 0.027246,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:4",
+      "shape": [
+        1,
+        1,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.010228,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:4",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 1,
+      "latency_ms": 2.333579,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:4",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.6050525,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:4",
+      "shape": [
+        1,
+        1024,
+        4,
+        256,
+        512
+      ],
+      "threads": 16,
+      "latency_ms": 4.3422105,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:4:split",
+      "shape": [
+        1,
+        1,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.0137405,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:4:split",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.6658884999999999,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:4:split",
+      "shape": [
+        1,
+        1024,
+        4,
+        256,
+        512
+      ],
+      "threads": 16,
+      "latency_ms": 4.569623999999999,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:8",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 1,
+      "latency_ms": 3.5182335,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:8",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.901683,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:8",
+      "shape": [
+        1,
+        1024,
+        4,
+        256,
+        512
+      ],
+      "threads": 16,
+      "latency_ms": 6.3399125,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:8:split",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.9135639999999999,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_avx2_bhtd:8:split",
+      "shape": [
+        1,
+        1024,
+        4,
+        256,
+        512
+      ],
+      "threads": 16,
+      "latency_ms": 4.629611499999999,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_blas_bhtd:32",
+      "shape": [
+        1,
+        1,
+        4,
+        192,
+        384
+      ],
+      "threads": 1,
+      "latency_ms": 0.0252095,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_blas_bhtd:32",
+      "shape": [
+        1,
+        1,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.026014,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_blas_bhtd:32",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 1,
+      "latency_ms": 2.2910575,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_blas_bhtd:32",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.614759,
+      "n": 5
+    },
+    {
+      "configuration": "chunkwise_blas_bhtd:32",
+      "shape": [
+        1,
+        1024,
+        4,
+        256,
+        512
+      ],
+      "threads": 16,
+      "latency_ms": 3.562563,
+      "n": 5
+    },
+    {
+      "configuration": "recurrent_avx2_panelwise_bhtd",
+      "shape": [
+        1,
+        1,
+        4,
+        192,
+        384
+      ],
+      "threads": 1,
+      "latency_ms": 0.019007999999999997,
+      "n": 5
+    },
+    {
+      "configuration": "recurrent_avx2_panelwise_bhtd",
+      "shape": [
+        1,
+        1,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.012132,
+      "n": 5
+    },
+    {
+      "configuration": "recurrent_avx2_panelwise_bhtd",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 1,
+      "latency_ms": 3.0057885,
+      "n": 5
+    },
+    {
+      "configuration": "recurrent_avx2_panelwise_bhtd",
+      "shape": [
+        1,
+        256,
+        4,
+        192,
+        384
+      ],
+      "threads": 16,
+      "latency_ms": 0.6927165,
+      "n": 5
+    },
+    {
+      "configuration": "recurrent_avx2_panelwise_bhtd",
+      "shape": [
+        1,
+        1024,
+        4,
+        256,
+        512
+      ],
+      "threads": 16,
+      "latency_ms": 4.7945329999999995,
+      "n": 5
+    }
+  ]
+}

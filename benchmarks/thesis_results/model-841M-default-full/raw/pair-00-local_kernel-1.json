@@ -1,0 +1,438 @@
+{
+  "finished_utc": "2026-10-17T19:06:04.117391+00:00",
+  "host": {
+    "cpu_model": "13th Gen Intel(R) Core(TM) i7-13700K",
+    "kernel": "6.18.54.1-microsoft-standard-WSL2",
+    "memory_gib": 30.6,
+    "os": "Ubuntu 22.04.5 LTS",
+    "python": "3.11.15",
+    "torch": "2.12.0+cpu",
+    "torch_config": "PyTorch built with:\n  - GCC 13.3\n  - C++ Version: 202002\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.11.2 (Git Hash 03c022d3ffdcee958cfacbe720048e725fdf644c)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=7661cd9c6b841b62b7f411aa52ec51f05457263b, CUDA_FLAGS= -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xfatbin -compress-all  -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -DC10_NODEPRECATED, CXX_COMPILER=/opt/rh/gcc-toolset-13/root/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=old-style-cast -faligned-new -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-dangling-reference -Wno-error=dangling-reference -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.12.0, USE_CUDA=0, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n",
+    "transformers": "5.9.0"
+  },
+  "identity": {
+    "affinity": [
+      0
+    ],
+    "backend": "local_kernel",
+    "backends": [
+      "official",
+      "local_kernel"
+    ],
+    "checkpoint": "mlstm_v1--tokenparam--ctx-8192--params-841.5M--tokens-926.94B--id-m97a5wxv",
+    "configuration": "avx2_c_t_fused_r16_bhtd",
+    "execution": {
+      "compile": null,
+      "mode": "eager"
+    },
+    "fp_policy": "default",
+    "kernel": "avx2_c_t_fused_r16_bhtd",
+    "pair_index": 0,
+    "prefill_only": null,
+    "scopes": [
+      "full_model"
+    ],
+    "threads": 1
+  },
+  "in_model_cells": {
+    "available": true,
+    "workloads": [
+      {
+        "cell_ms": [
+          0.288415,
+          0.293872,
+          0.299714,
+          0.306769,
+          0.275306,
+          0.307981,
+          0.300674,
+          0.283912,
+          0.289212,
+          0.307829,
+          0.350714,
+          0.282602,
+          0.305633,
+          0.285334,
+          0.316316,
+          0.282748,
+          0.280832,
+          0.299047,
+          0.33403,
+          0.299364,
+          0.302587,
+          0.332079,
+          0.293669,
+          0.290028
+        ],
+        "prompt_length": 16,
+        "scope": "full_model",
+        "token_count": 16,
+        "total_cell_ms": 7.208667,
+        "wall_ms": 298.099778,
+        "workload": "prompt"
+      },
+      {
+        "cell_ms": [
+          0.860712,
+          0.863867,
+          0.830209,
+          0.873576,
+          0.843196,
+          0.849513,
+          0.866279,
+          0.838554,
+          0.866565,
+          0.876467,
+          0.84178,
+          0.85862,
+          0.922167,
+          0.877433,
+          0.879709,
+          0.867966,
+          0.848793,
+          0.897712,
+          0.886071,
+          0.867502,
+          0.84054,
+          0.887839,
+          0.872636,
+          0.854787
+        ],
+        "prompt_length": 64,
+        "scope": "full_model",
+        "token_count": 64,
+        "total_cell_ms": 20.772493,
+        "wall_ms": 727.184636,
+        "workload": "prompt"
+      },
+      {
+        "cell_ms": [
+          3.118458,
+          3.121853,
+          3.19188,
+          3.143024,
+          3.052991,
+          3.07619,
+          3.199212,
+          3.171919,
+          3.12462,
+          3.182294,
+          3.094817,
+          3.166825,
+          3.141314,
+          3.139801,
+          3.087882,
+          3.167799,
+          3.080752,
+          3.535686,
+          3.428464,
+          3.385953,
+          3.103169,
+          3.092107,
+          3.106074,
+          3.146796
+        ],
+        "prompt_length": 256,
+        "scope": "full_model",
+        "token_count": 256,
+        "total_cell_ms": 76.05988,
+        "wall_ms": 2536.623261,
+        "workload": "prompt"
+      },
+      {
+        "cell_ms": [
+          12.81914,
+          12.587023,
+          12.783357,
+          12.671019,
+          12.723673,
+          12.706818,
+          12.487818,
+          12.555433,
+          12.852401,
+          12.632043,
+          12.64819,
+          12.685352,
+          12.654484,
+          12.676334,
+          12.638148,
+          12.639782,
+          12.718734,
+          12.689706,
+          12.708178,
+          12.712946,
+          12.698017,
+          14.475687,
+          15.212732,
+          14.91168
+        ],
+        "prompt_length": 1024,
+        "scope": "full_model",
+        "token_count": 1024,
+        "total_cell_ms": 310.888695,
+        "wall_ms": 10215.393617,
+        "workload": "prompt"
+      },
+      {
+        "cell_ms": [
+          8.535161,
+          8.317364,
+          8.035111,
+          8.34411,
+          8.256112,
+          8.288549,
+          8.304781,
+          8.302821,
+          8.320759,
+          8.559162,
+          8.319076,
+          8.224215,
+          8.182615,
+          8.245448,
+          8.053464,
+          8.268764,
+          8.576589,
+          8.134829,
+          8.035472,
+          8.193144,
+          8.772006,
+          9.207024,
+          9.092899,
+          8.338537
+        ],
+        "decode_length": 128,
+        "prefill_length": 256,
+        "scope": "full_model",
+        "token_count": 128,
+        "total_cell_ms": 200.908012,
+        "wall_ms": 11016.759724,
+        "workload": "decode"
+      }
+    ]
+  },
+  "measurements": [
+    {
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8097
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          192561
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8097
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          192561
+        ]
+      },
+      "median_ms": 294.912893,
+      "prompt_length": 16,
+      "samples_ms": [
+        294.912893,
+        292.947037,
+        297.040216,
+        305.284733,
+        292.639372
+      ],
+      "scope": "full_model",
+      "token_count": 16,
+      "workload": "prompt"
+    },
+    {
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8097
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          192561
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8097
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          192561
+        ]
+      },
+      "median_ms": 721.548962,
+      "prompt_length": 64,
+      "samples_ms": [
+        727.283137,
+        721.548962,
+        720.154712,
+        722.526985,
+        720.989737
+      ],
+      "scope": "full_model",
+      "token_count": 64,
+      "workload": "prompt"
+    },
+    {
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8097
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          192561
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8097
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          192561
+        ]
+      },
+      "median_ms": 2658.37145,
+      "prompt_length": 256,
+      "samples_ms": [
+        2618.795746,
+        2618.394328,
+        2700.992347,
+        2706.770285,
+        2658.37145
+      ],
+      "scope": "full_model",
+      "token_count": 256,
+      "workload": "prompt"
+    },
+    {
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8097
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          192561
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8097
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          192561
+        ]
+      },
+      "median_ms": 10263.043059,
+      "prompt_length": 1024,
+      "samples_ms": [
+        10584.707479,
+        10263.043059,
+        10153.288512,
+        10619.116295,
+        10241.301966
+      ],
+      "scope": "full_model",
+      "token_count": 1024,
+      "workload": "prompt"
+    },
+    {
+      "decode_length": 128,
+      "fp_after": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8097
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          192561
+        ]
+      },
+      "fp_before": {
+        "cpus": [
+          0
+        ],
+        "mxcsr": [
+          8097
+        ],
+        "observed_threads": 1,
+        "policy": "default",
+        "tids": [
+          192561
+        ]
+      },
+      "prefill_length": 256,
+      "scope": "full_model",
+      "token_count": 128,
+      "trajectory_ms": 11134.674118,
+      "workload": "decode"
+    }
+  ],
+  "model": {
+    "embedding_dim": 1536,
+    "eps": 1e-06,
+    "hidden_size": 1536,
+    "key_dim": 192,
+    "num_blocks": 24,
+    "num_heads": 4,
+    "num_hidden_layers": 24,
+    "parameter_count": 841496256,
+    "value_dim": 384,
+    "vocab_size": 50304
+  },
+  "numerical_acceptance": "passed",
+  "runtime": {
+    "environment": {
+      "MKL_DYNAMIC": "FALSE",
+      "MKL_NUM_THREADS": "1",
+      "MLSTM_BENCH_CPUS": "0",
+      "MLSTM_THREADS": "1",
+      "OMP_DYNAMIC": "FALSE",
+      "OMP_MAX_ACTIVE_LEVELS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OMP_PLACES": "{0}",
+      "OMP_PROC_BIND": "close",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "parallel_info": "ATen/Parallel:\n\tat::get_num_threads() : 1\n\tat::get_num_interop_threads() : 1\nOpenMP 201511 (a.k.a. OpenMP 4.5)\n\tomp_get_max_threads() : 1\nIntel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n\tmkl_get_max_threads() : 1\nIntel(R) MKL-DNN v3.11.2 (Git Hash 03c022d3ffdcee958cfacbe720048e725fdf644c)\nstd::thread::hardware_concurrency() : 24\nEnvironment variables:\n\tOMP_NUM_THREADS : 1\n\tMKL_NUM_THREADS : 1\nATen parallel backend: OpenMP\n"
+  },
+  "started_utc": "2026-10-17T19:03:07.846130+00:00"
+}
